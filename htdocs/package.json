@@ -28,7 +28,7 @@
     "build:copy-1": "cpy ./app/preview/fonts/* ./build/fonts/ && cpy ./app/preview/js/vendor.js ./build/js/ && cpy ./app/preview/js/app.js ./build/js/",
     "build:copy-2": "cpy ./app/preview/css/vendor.css ./build/css/ && cpy ./app/preview/imgs/* ./build/imgs/",
     "build:stylus": "stylus -u nib -u axis-css -u autoprefixer-stylus -u rupture -u jeet ./app/stylus/main.styl --out ./build/css/styles.css",
-    "build:jade": "jade -P ./app/jade/*.jade --out ./build/",
+    "build:jade": "jade -P ./app/jade/ --out ./build/",
     "build:minify": "npm-run-all --parallel build:ugly-1 build:ugly-2 build:cssmin",
     "build:ugly-1": "uglifyjs ./build/js/vendor.js --compress --output ./build/js/vendor.js",
     "build:ugly-2": "uglifyjs ./build/js/app.js --screw-ie8 --compress --mangle --output ./build/js/app.js",
