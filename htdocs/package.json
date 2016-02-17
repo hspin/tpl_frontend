@@ -32,7 +32,7 @@
     "build:minify": "npm-run-all --parallel build:ugly-1 build:ugly-2 build:cssmin",
     "build:ugly-1": "uglifyjs ./build/js/vendor.js --compress --output ./build/js/vendor.js",
     "build:ugly-2": "uglifyjs ./build/js/app.js --screw-ie8 --compress --mangle --output ./build/js/app.js",
-    "build:cssmin": "gulp ",
+    "build:cssmin": "gulp minify-css",
     "build": "cross-env NODE_ENV=production npm-run-all build:clean build:copy-1 build:copy-2 build:stylus build:jade build:minify",
     "build-serve": "browser-sync start --port 3000 --server ./build"
   },
