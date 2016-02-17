@@ -1,0 +1,83 @@
+// *** square boxes ***
+// {{{
+.sp-boxframe
+  center()
+
+.sp-box
+  col(1/3)
+  min-height 150px
+  background #f5f5f5
+  border 5px $sp-color-personal solid
+  padding 0px 10px
+  margin-bottom 20px
+  +below($breakpoint-md)
+    stack()
+    margin-bottom 20px
+    width 96%
+  h2 
+    font-size 25px
+    color #686868
+  p
+    line-height 20px
+// }}}
+
+// *** tables ***
+.hidden 
+  display none
+
+$table-blue = #f4f8fc
+$table-light-blue = #ecf2f9
+$table-col = #dfe9f5
+
+.sp-tables
+  table
+    border 0px
+    width 100%
+  table td, table th 
+    border 1px solid #fff
+    min-width 100px
+    padding 5px 10px
+  table thead tr
+    background $sp-general-blue
+    color #fff
+  table tbody tr.odd
+    background $table-blue
+  table tbody tr.even
+    background $table-light-blue
+  table td.firstcol
+    background $table-col
+    color #000
+  table tbody td.colspacer
+    background #fff
+    margin 0
+    padding 0
+    height 4px
+
+// my plans - table
+$mp-table-blue = #b3d1ed
+$mp-table-light-blue = #dfe9f5
+$mp-table-head-col = #dfe9f5
+$mp-table-col = #f4f8fc
+
+table#myplans
+  th
+    padding 15px
+  td
+    padding 15px
+    font-size 11px
+    line-height 15px
+    vertical-align top
+  td.row-head
+    background $mp-table-blue
+    font-weight bold
+  td.row-hi-head
+    background $mp-table-head-col
+  td.row-body
+    background $mp-table-light-blue
+  td.row-hi-body
+    background $mp-table-col
+  tbody td.colspacer
+    background #fff
+    margin 0
+    padding 0
+    height 4px
